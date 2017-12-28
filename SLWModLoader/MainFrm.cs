@@ -58,7 +58,9 @@ namespace SLWModLoader
                 // Load all mod information
                 foreach (var mod in modsCategory)
                 {
-                    string modPth = Path.Combine(modsDBFolder, mod.Value);
+                    string modPth = (File.Exists(mod.Value))?
+                        mod.Value : Path.Combine(modsDBFolder, mod.Value);
+
                     if (File.Exists(modPth))
                     {
                         var lvi = modsList.Items.Add(LoadModData(modPth));

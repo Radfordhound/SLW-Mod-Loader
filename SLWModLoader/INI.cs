@@ -41,7 +41,7 @@ namespace SLWModLoader
                         continue;
 
                     key = line.Substring(0, equalsIndex);
-                    value = line.Substring(equalsIndex + 1);
+                    value = line.Substring(equalsIndex + 1).Replace("\"", "");
 
                     if (container == null)
                         ini.Add(key, value);
