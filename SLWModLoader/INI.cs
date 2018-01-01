@@ -44,6 +44,7 @@ namespace SLWModLoader
                     value = line.Substring(equalsIndex + 1);
                     if (!string.IsNullOrEmpty(value) && value[0] == '\"')
                     {
+                        // Remove first and last character
                         value = value.Substring(1, value.Length - 2);
                     }
 
