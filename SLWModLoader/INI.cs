@@ -37,11 +37,15 @@ namespace SLWModLoader
                 else
                 {
                     equalsIndex = line.IndexOf('=');
-                    if (equalsIndex < 0)
+                    if (equalsIndex == -1)
                         continue;
 
                     key = line.Substring(0, equalsIndex);
-                    value = line.Substring(equalsIndex + 1).Replace("\"", "");
+                    value = line.Substring(equalsIndex + 1);
+                    if (!string.IsNullOrEmpty(value) && value[0] == '\"')
+                    {
+                        value = value.Substring(1, value.Length - 2);
+                    }
 
                     if (container == null)
                         ini.Add(key, value);
