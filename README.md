@@ -1,3 +1,5 @@
+## **THIS MOD LOADER IS OUTDATED!** Please use [Hedge Mod Manager](https://github.com/thesupersonic16/HedgeModManager) instead.
+
 # Sonic Lost World Mod Loader
 A mod loader for Sonic Lost World on the PC! This is currently a work in progress and is not in any way finished.
 
